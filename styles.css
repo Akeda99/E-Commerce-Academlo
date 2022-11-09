@@ -259,7 +259,9 @@ footer h2{
    height: 50px;
    align-items: center;
    justify-content: space-between;
-   gap: 0.5rem;
+   text-align: center;
+   
+   
 }
 .logo{
     width: 30px;
@@ -267,9 +269,18 @@ footer h2{
     margin-bottom: 9px;
 
 }
+.img_logo{
+fill: #E94959;
+margin-top:1px;
+display: flex;
+justify-content: center;
+text-align: center;
+align-items: center;
+
+}
 .logo_store p{
     font-weight: bold;
-    font-size: 9px;
+    font-size: 10px;
     letter-spacing: 1px;
 }
 a{
@@ -293,6 +304,15 @@ a{
     
     
     
+}
+.icons_nav{
+display: flex;
+justify-content: space-between;
+width: 92px;
+
+}
+.shop_cart img{
+    width:auto ;
 }
 .rights{
     display: flex;
