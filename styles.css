@@ -367,7 +367,7 @@ transition: transform 0.5s;
     transform: translateX(100%);
 }
 
-/* .load {
+.load {
     position: fixed;
     top: 0;
     left: 0;
@@ -396,7 +396,7 @@ transition: transform 0.5s;
     100% {
       transform: translateY(0);
     }
-  } */
+  }
  .img_products:hover .img_size {
     transform: translateY(-.25rem);
   }
