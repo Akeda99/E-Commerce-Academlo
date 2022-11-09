@@ -5,7 +5,8 @@ const menu= document.querySelector(".menu");
 const home=document.querySelector(".home");
 const products=document.querySelector(".products");
 const icon_x=document.querySelector(".icon_x");
-// const letter_color=document.querySelector(".letter_color")
+const Hoodies_products=document.querySelector(".Hoodies_products");
+
 window.addEventListener('load', function () {
     load()
   })
@@ -63,5 +64,25 @@ const clothes =[
     quantity:20
 },
 ];
+
+let html="";
+
+clothes.forEach(({id, name, price, image, category, quantity})=> {
+    html+= `
+    <div class="clothes_products">
+        <div class="img_products">
+            <img src="${image}" alt="${category}" class="img_size">
+        </div>
+        <div class="products_data">
+        <h2>$${price}.00<span>| Stock: ${quantity}</span></h2>
+        <h3>${name}</h3>
+        <button class="boton_plus btn_add" id="${id}">+</button>
+        </div>
+        </div>
+    
+    `;
+})
+Hoodies_products.innerHTML= html;
+
 
 

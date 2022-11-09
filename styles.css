@@ -173,7 +173,7 @@ border-right: 1px solid #A1A1A1;
 .img_size{
     width: 150px;
 }
-.Hoodie_1, .Hoodie_2, .Hoodie_3{
+.clothes_products{
     width: 200px;
     min-height: 240px;
 
@@ -194,6 +194,7 @@ border-right: 1px solid #A1A1A1;
     flex-direction: column;
     text-align: left;
     padding: 1rem;
+    border-radius: 0 0 1rem 1rem;
    
 }
 .boton_plus{
@@ -211,14 +212,17 @@ border-right: 1px solid #A1A1A1;
     }
 .products_data h2{
     font-weight:600;
-    font-size: 20px ;
+    font-size: 18px ;
 }
 .products_data h3{
-    font-weight: lighter;
+    font-size:12px;
+    font-weight: 500;
 }
 span {
     font-size: 13px;
     font-weight: lighter;
+    
+    
 }
 
 
@@ -363,7 +367,7 @@ transition: transform 0.5s;
     transform: translateX(100%);
 }
 
-.load {
+/* .load {
     position: fixed;
     top: 0;
     left: 0;
@@ -392,7 +396,7 @@ transition: transform 0.5s;
     100% {
       transform: translateY(0);
     }
-  }
+  } */
  .img_products:hover .img_size {
     transform: translateY(-.25rem);
   }
