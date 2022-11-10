@@ -1,5 +1,5 @@
 import {load} from './load.js'
-
+import { darkTheme } from './darkTheme.js'
 const icon_menu= document.querySelector(".icon_menu");
 const menu= document.querySelector(".menu");
 const home=document.querySelector(".home");
@@ -9,6 +9,7 @@ const Hoodies_products=document.querySelector(".Hoodies_products");
 const content_cartshop=document.querySelector(".content_cartshop");
 const shop_cart=document.querySelector(".shop_cart");
 const content_cartshop_items=document.querySelector(".content_cartshop_items");
+
 
 const clothes =[
     {
@@ -164,3 +165,5 @@ content_cartshop.addEventListener('click',(e)=>{
     
     printClothesInCart();
 })
+document.addEventListener('DOMContentLoaded', function () {
+    darkTheme()})
