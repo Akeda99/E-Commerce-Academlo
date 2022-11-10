@@ -411,7 +411,7 @@ transition: transform 0.5s;
     top: 32px;z-index: 1000;
     right: 0;
     
-    transform: translateX(100%);
+    transform: translateX(0);
     transition: transform 0.5s;
     padding: 2rem;
     display: flex;
@@ -420,7 +420,7 @@ transition: transform 0.5s;
     text-align: center;
   }
   .content_cartshop_show{
-    transform: translateX(0);
+    transform: translateX(100%);
   }
   .content_cartshop_items{
     background-color: #FFFFFF;
