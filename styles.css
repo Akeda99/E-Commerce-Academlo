@@ -379,6 +379,7 @@ transition: transform 0.5s;
     display: grid;
     justify-content: center;
     align-items: center;
+    z-index: 1200;
   }
   
   .load svg {
