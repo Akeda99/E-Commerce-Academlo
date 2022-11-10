@@ -197,6 +197,14 @@ border-right: 1px solid #A1A1A1;
     
    
 }
+.products_data h2{
+  font-weight:600;
+  font-size: 18px ;
+}
+.products_data h3{
+  font-size:12px;
+  font-weight: 500;
+}
 .boton_plus{
     position: absolute;
     width: 50px;
@@ -209,15 +217,9 @@ border-right: 1px solid #A1A1A1;
     font-size: xx-large;
     top: -25px;
     right: 15px;
+    cursor: pointer;
     }
-.products_data h2{
-    font-weight:600;
-    font-size: 18px ;
-}
-.products_data h3{
-    font-size:12px;
-    font-weight: 500;
-}
+
 span {
     font-size: 13px;
     font-weight: lighter;
@@ -256,7 +258,9 @@ footer h2{
     height: 15px;
     width: 15px;
 }
-
+.bx{
+  cursor: pointer;
+}
 
 .logo_store{
     display: flex;
@@ -264,7 +268,7 @@ footer h2{
    align-items: center;
    justify-content: space-between;
    text-align: center;
-   
+   cursor: pointer;
    
 }
 .logo{
@@ -303,7 +307,7 @@ a{
     width: 100%;
     left: 0;
     top: 0;
-    z-index: 1000;
+    z-index: 80;
     
     
 }
@@ -314,11 +318,24 @@ width: 100px;
 padding-right: 1rem;
 align-items: center;
 
-
 }
-.shop_cart img{
+.icon_menu{
+  cursor:pointer;
+}
+.shop_cart svg{
     width:auto ;
+    cursor: pointer;
 }
+.shop_cart{
+position: relative;
+}
+.countClothes{
+position: absolute;
+font-size: 0.7rem;
+color: #E94959;
+font-weight: 600;
+}
+
 .rights{
     display: flex;
     flex-direction: column;
@@ -341,9 +358,6 @@ height: 1px;
     
 }
 
-.icon_x{
-display: none;
-}
 html{
     scroll-behavior: smooth;
 }
@@ -355,19 +369,34 @@ html{
 }
 
 .icon_x{
-position: fixed;
-display: block;
-top: 25px;
-right: -90%;
-width: 100%;
-height: 100%;
-transform: translateX(0%);
-transition: transform 0.5s;
+  display: none;
+  position: fixed;
+  display: block;
+  top: 40px;
+  right: 100px;
+  transform: translateX(0%);
+  transition: transform 0.5s;
+  cursor: pointer;
 }
 .icon_show{
     transform: translateX(100%);
+    right: -50px
 }
-
+.icon_x2{
+  display: none;
+position: fixed;
+display: block;
+top: 40px;
+right: 100px;
+transform: translateX(0%);
+transition: transform 0.5s;
+cursor: pointer;
+}
+.icon_show2{
+    transform: translateX(100%);
+    right: -50px
+}
+/* 
 .load {
     position: fixed;
     top: 0;
@@ -379,7 +408,7 @@ transition: transform 0.5s;
     display: grid;
     justify-content: center;
     align-items: center;
-    z-index: 1200;
+    
   }
   
   .load svg {
@@ -398,7 +427,7 @@ transition: transform 0.5s;
     100% {
       transform: translateY(0);
     }
-  }
+  } */
 .img_products:hover .img_size {
     transform: translateY(-.25rem);
 }
@@ -408,7 +437,7 @@ transition: transform 0.5s;
     height: 100%;
 
     position: fixed;
-    top: 32px;z-index: 1000;
+    top: 0;
     right: 0;
     
     transform: translateX(0);
@@ -418,13 +447,15 @@ transition: transform 0.5s;
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    
   }
   .content_cartshop_show{
     transform: translateX(100%);
+    
   }
   .content_cartshop_items{
     background-color: #FFFFFF;
-    height: 80%;
+    height: 60%;
     padding: 1rem;
 
     display: flex;
@@ -435,8 +466,13 @@ transition: transform 0.5s;
   }
   .content_cartshop_total{
     background-color: #FFFFFF;
-    height: 20%;
+    height: 40%;
     padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
   }
   
   .clothes_options{
@@ -521,6 +557,7 @@ transition: transform 0.5s;
     justify-content: center;
     text-align: center;
     align-items: center;
+    cursor: pointer;
     }
     .btn_add1{
         height: 1.5rem;
@@ -529,6 +566,7 @@ transition: transform 0.5s;
         justify-content: center;
         text-align: center;
         align-items: center;
+        cursor: pointer;
     }
 .btn_del{
     border: none;
@@ -538,6 +576,7 @@ transition: transform 0.5s;
         justify-content: center;
         text-align: center;
         align-items: center;
+        cursor: pointer;
    }
     .btn .bi{
         fill: #E94959;
@@ -554,8 +593,6 @@ transition: transform 0.5s;
         --body-color: hsl(249, 19%, 14%);
         --container-color: hsl(246, 16%, 12%);
         --border-color: hsl(0, 0%, 20%);
-      }
-      .dark-theme .navbar{
         
       }
       .dark-theme .img_logo{
@@ -624,4 +661,7 @@ transition: transform 0.5s;
       .dark-theme .scroll-header {
         background-color: var(--body-color);
         box-shadow: 0 1px 4px hsla(0, 0%, 4%, .3);
+      }
+      .btn_nodrop{
+        cursor: no-drop;
       }
