@@ -1,5 +1,6 @@
 import {load} from './load.js'
 import { darkTheme } from './darkTheme.js'
+import { headerScroll } from './headerScroll.js';
 const icon_menu= document.querySelector(".icon_menu");
 const menu= document.querySelector(".menu");
 const home=document.querySelector(".home");
@@ -166,4 +167,6 @@ content_cartshop.addEventListener('click',(e)=>{
     printClothesInCart();
 })
 document.addEventListener('DOMContentLoaded', function () {
-    darkTheme()})
+    darkTheme()
+    headerScroll()
+})
