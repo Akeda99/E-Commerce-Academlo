@@ -412,7 +412,7 @@ cursor: pointer;
     transform: translateX(100%);
     right: -50px
 }
-/* 
+
 .load {
     position: fixed;
     top: 0;
@@ -443,7 +443,7 @@ cursor: pointer;
     100% {
       transform: translateY(0);
     }
-  } */
+  }
 .img_products:hover .img_size {
     transform: translateY(-.25rem);
 }
