@@ -61,8 +61,10 @@ function printTotal(){
 
     if(!arrayCartShop.length) {
     let html =`
-    <h3> Carrito Vacio </h3>
+    <h3>Tu carro esta vacio</h3>
+    <span>Puedes agregar items a tu carro clickeando en el boton de "+" en la seccion de productos.</span>
     <img src="./assets/empty-cart.png" alt="carrito vacio">
+
     `;
     return (content_cartshop_total.innerHTML=html);
     }
@@ -76,11 +78,14 @@ function printTotal(){
         acum+= curr.amount;
         return acum;
     },0);
-    countClothes.textContent= suma;
+    
     let html= `
-    <h3>Numero de Items:${suma}<h3>
-    <h3>${total}.00<h3>
-    <button class="btn btn_buy">Comprar</button>`
+    <div class="total_buy">
+    <h4>${suma} Items<h4>
+    <h3>Total a pagar: $${total}.00<h3>
+    <button class="btn btn_buy">Comprar</button>
+    </div>
+    `
     content_cartshop_total.innerHTML=html;
     
 }

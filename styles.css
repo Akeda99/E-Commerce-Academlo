@@ -13,6 +13,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    max-width: 1024px;
     gap:3rem;
     background-color: #F7F7F8;
     
@@ -20,7 +21,7 @@ body{
 .container{
     display: flex;
     flex-direction: column;
-    width: 400px;
+    max-width: 1024px;
     min-height: 100vh;
     margin: auto;
     gap: 3rem;
@@ -33,7 +34,7 @@ body{
     gap: 1rem;
     display: flex;
     flex-direction: column;
-    width: 400px;
+    max-width: 1024px;
    
 }
 ul{
@@ -94,6 +95,7 @@ img{
     margin-left: 100px;
     width: 300px;
     height: 430px;
+    right: 0;
     
 }
 .subtitle{
@@ -132,6 +134,10 @@ img{
     border: none;
     margin-top: 5px;
    
+}
+.add:hover{
+  background-color: #E94959;
+  transition: background-color 500ms linear;
 }
 .mid_text{
     display: grid;
@@ -219,6 +225,10 @@ border-right: 1px solid #A1A1A1;
     right: 15px;
     cursor: pointer;
     }
+    .boton_plus:hover{
+      background-color: #E94959;
+      color: #E6E6E6;
+    }
 
 span {
     font-size: 13px;
@@ -227,16 +237,17 @@ span {
     
 }
 
-
 footer{
     display: flex;
     flex-direction: column;
     gap: 1rem;
     background-color: hsl(0deg 0% 90%);
     padding: 1rem;
-    padding-top: 8rem;
+    padding-top: 7rem;
+    position: relative;
+    height: 600px;
 }
-.text_footer{
+.about_us, .product{
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -337,13 +348,16 @@ font-weight: 600;
 }
 
 .rights{
+  position: absolute;
     display: flex;
     flex-direction: column;
-    padding: 2rem;
     justify-content: center;
+    padding: 1rem;
     align-items: center;
     color: #656464;
-
+    background-color: hsl(0deg 0% 90%);
+    bottom: 0px;
+    right: 40%;
     
 }
 .hr{
@@ -357,7 +371,9 @@ height: 1px;
     font-weight: lighter;
     
 }
-
+.menu1{
+  display: none;
+}
 html{
     scroll-behavior: smooth;
 }
@@ -447,7 +463,14 @@ cursor: pointer;
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    gap: 1rem;
     
+  }
+  .content_cartshop_total h3{
+    font-size: 18px;
+  }
+  .content_cartshop_total span{
+    color: #A1A1A1;
   }
   .content_cartshop_show{
     transform: translateX(100%);
@@ -455,7 +478,7 @@ cursor: pointer;
   }
   .content_cartshop_items{
     background-color: #FFFFFF;
-    height: 60%;
+    height: 70%;
     padding: 1rem;
 
     display: flex;
@@ -464,17 +487,58 @@ cursor: pointer;
 
     overflow-y: scroll;
   }
+  .total_buy{
+display: flex;
+flex-direction: column;
+gap: 0.5rem;
+font-weight: lighter;
+  }
+  .total_buy h4{
+display: flex;
+text-align: left;
+font-weight: lighter;
+  }
+.total_buy h3{
+  font-weight: lighter;
+  font-size: 16px;
+  display: flex;
+  text-align: left;
+}
   .content_cartshop_total{
     background-color: #FFFFFF;
-    height: 40%;
+    height: 30%;
     padding: 1rem;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    
     gap: 1rem;
+    font-size: 14px;
   }
-  
+  .content_cartshop_total button{
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;	
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color:#E94959;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+  }
+  .content_cartshop_total button:hover{
+    background-color: #9b1825;
+  }
+  .content_cartshop_total button:active{
+    background-color: #9b1825;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
   .clothes_options{
     display: flex;
     justify-content: center;
@@ -489,10 +553,11 @@ cursor: pointer;
     justify-content: center;
     text-align: center;
     align-items: center;
+    background-color: #FFFFFF;
   }
   .img_shop{
-    background-color:#A1A1A1;
-    border-color: #656464;
+    background-color: #FFFFFF;
+    border: 1px solid lightgray;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -558,16 +623,23 @@ cursor: pointer;
     text-align: center;
     align-items: center;
     cursor: pointer;
+    font-size: 18px;
+    background-color: #FFFFFF;
+    border: 1px solid #E6E6E6;
     }
     .btn_add1{
-        height: 1.5rem;
-        width: 1.5rem;
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
-        cursor: pointer;
-    }
+      height: 1.5rem;
+      width: 1.5rem;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      cursor: pointer;
+      font-size: 18px;
+      background-color: #FFFFFF;
+      border: 1px solid #E6E6E6;
+      }
+
 .btn_del{
     border: none;
     background-color:#FFFFFF;
@@ -640,6 +712,10 @@ cursor: pointer;
         background-color: var(--button-color);
         color: var(--title-color);
       }
+      .dark-theme .boton_plus:hover{
+        background-color: var(--first-color);
+        color: var(--container-color);
+      }
       .dark-theme footer{
         background-color: var( --container-color);
         color: var(--text-color);
@@ -665,3 +741,204 @@ cursor: pointer;
       .btn_nodrop{
         cursor: no-drop;
       }
+      .dark-theme .content_cartshop{
+        background-color: var(--body-color);
+      }
+      .dark-theme .content_cartshop_total{
+        background-color: var(--body-color);
+      }
+      .dark-theme .content_cartshop_items{
+        background-color: var(--body-color);
+      }
+      .dark-theme .btn_add1,
+      .dark-theme .btn_rest{
+        background-color: var(--body-color);
+        color: var(--title-color);
+        border: 1px solid var(--border-color);
+      }
+      .dark-theme .btn_del{
+        fill: var(--first-color);
+        background-color: var(--body-color);
+      }
+      .dark-theme .img_shop,
+      .dark-theme .img_size_shop{
+        background-color: var(--body-color);
+        
+      }
+      .dark-theme .img_shop{
+        border: 1px solid var(--border-color);
+      }
+      .dark-theme .content_cartshop_total button{
+        background-color: var(--first-color);
+        box-shadow: 0 9px var(--button-color-alt);
+        color: var(--button-color);
+      }
+      
+    .dark-theme .content_cartshop_total button:hover{
+      background-color:  hsl(183, 41%, 61%);
+      color: var(--title-color);
+    }
+    .dark-theme .content_cartshop_total button:active{
+      background-color: hsl(183, 41%, 61%);
+      box-shadow: 0 5px #666;
+      transform: translateY(4px);
+    }
+    .dark-theme .clothes_options_shop p{
+      color: var(--text-color);
+    }
+    .dark-theme .text_subtotal{
+      color: var(--first-color);
+    }
+    .dark-theme .stock_price p{
+      color: var(--first-color);
+    }
+    .dark-theme .stock_price span, .dark-theme .content_cartshop_total span{
+      color: var(--text-color);
+      }
+  .dark-theme .total_buy,.dark-theme .content_cartshop_total h3 {
+        color: var(--title-color);
+      }
+.dark-theme .icon_x, .dark-theme .icon_x2{
+  color: var(--title-color);
+}
+.dark-theme .menu{
+  background-color: var(--body-color);
+}
+.dark-theme .home, .dark-theme .products{
+  color: var(--first-color);
+}
+.dark-theme .color{
+  color: var(--title-color);
+}
+.main{
+  background-color: var(--body-color);
+}
+@media (min-width: 320px){
+footer{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: hsl(0deg 0% 90%);
+  padding: 1rem;
+  padding-top: 8rem;
+  position: relative;
+  height: 750px;
+}
+.rights{
+
+  right: 33%;
+}
+}
+@media (min-width: 576px){
+  
+  .img_polo_principal{
+    width: auto;
+    margin-left: 220px;
+  }
+  .img_polo{
+    padding: 1rem;
+  }
+  .title{
+    font-size: 40px;
+  }
+  .Products_pick{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+  }
+.Hoodies_products{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap:2rem;
+}
+footer{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  height: 650px;
+}
+.rights{
+  right: 36%;
+}
+}
+@media (min-width: 767px){
+  footer{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    height: 450px;
+    font-size: 12px;
+    gap: 3rem;
+  }
+  .mid_text{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+  }
+  .img_polo_principal{
+    width: 340px;
+    height: 430px;
+    margin-left: -200px;
+  }
+  .container_principal{
+    display: flex;
+    flex-direction: row-reverse;
+    padding-bottom: 3rem;
+    
+  }
+  .text_principal{
+    width:600px;
+    margin-top: 6rem;
+    padding-right: 190px;
+    gap: 1.5rem;
+  }
+  .title{
+    font-size: 30 px;
+  }
+  .navbar{
+    height: 60px;
+  }
+  .icon_menu{
+    display: none;
+  }
+  .menu1{
+    position: fixed;
+    display: flex;
+    gap: 1rem;
+    font-size: 16px;
+    font-weight: bolder;
+    left: 140px;
+    color: #000000;
+  }
+  .home1:hover, .products1:hover{
+    color: #E94959;
+  }
+  .icons_nav{
+width: 70px;
+padding-right: 1rem;
+align-items: center;
+  }
+  .icon_x2{
+    top: 90px;
+  }
+  .logo{
+    width: 40px;
+    height: 40px;
+    margin-bottom: 9px;
+  }
+  .logo_store p{
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+}
+@media (min-width: 968px){
+  .container{
+    min-width: 968px;
+  }
+.text_principal{
+  display: flex;
+}
+  .rights{
+    right:42%
+  }
+}
