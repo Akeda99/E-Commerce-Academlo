@@ -343,7 +343,7 @@ position: relative;
 .countClothes{
 position: absolute;
 font-size: 0.7rem;
-color: #E94959;
+color: black;
 font-weight: 600;
 }
 
@@ -465,6 +465,9 @@ cursor: pointer;
     text-align: center;
     gap: 1rem;
     
+  }
+  .content_cartshop h2{
+    margin-top: 4rem;
   }
   .content_cartshop_total h3{
     font-size: 18px;
@@ -846,6 +849,7 @@ footer{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 3rem;
     
   }
 .Hoodies_products{
@@ -935,10 +939,51 @@ align-items: center;
   .container{
     min-width: 968px;
   }
+  .container_principal{
+    position:relative;
+  }
 .text_principal{
-  display: flex;
+  position: absolute;
+  top:0;
+  left:0;
+  width: 750px;
 }
   .rights{
     right:42%
+  }
+}
+@media (min-width: 992px){
+  .text_principal{
+    position: absolute;
+    top:5rem;
+    left:0;
+    width: 650px;
+  }
+  .img_polo_principal{
+    width: 480px;
+    height: 680px;
+    margin-left: -200px;
+  }
+  .container_principal{
+    margin-bottom: 8rem;
+  }
+  .Hoodies_products{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:4rem;
+  }
+  .rights{
+    right:41%
+  }
+}
+@media (min-width: 1024px){
+  .img_polo_principal{
+    margin-right: -35px;
+  }
+  footer{
+    width: 1024px;
+  }
+  .navbar{
+    max-width: 1024px;
   }
 }
